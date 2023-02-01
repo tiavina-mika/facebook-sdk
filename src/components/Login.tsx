@@ -11,7 +11,7 @@ const Login = () => {
 
       console.log("response", response);
     } catch (error) {
-      console.log("error.message", error.message);
+      console.log("error.message", (error as any).message);
     }
   };
 
