@@ -3,7 +3,7 @@ import Login from "./components/Login";
 
 const App = () => {
   return (
-    <FacebookProvider appId="485197992891856">
+    <FacebookProvider appId="xxx">
       <Login />
     </FacebookProvider>
   );
