@@ -1,24 +1,24 @@
-import { useLogin } from 'react-facebook';
+import { useLogin } from "react-facebook";
 
 const Login = () => {
-  const { login, status, isLoading, error} = useLogin();
-  
-  async function handleLogin() {
+  const { login, isLoading } = useLogin();
+
+  const handleLogin = async () => {
     try {
       const response = await login({
-        scope: 'email',
+        scope: "email"
       });
 
-      console.log(response.status);
-    } catch (error: any) {
-      console.log(error.message);
+      console.log("response", response);
+    } catch (error) {
+      console.log("error.message", error.message);
     }
-  }
+  };
 
   return (
     <button onClick={handleLogin} disabled={isLoading}>
       Login via Facebook
     </button>
   );
-}
+};
 export default Login;
